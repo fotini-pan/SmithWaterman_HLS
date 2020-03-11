@@ -18,21 +18,20 @@ void SmithWaterman(
 	int *l)
 {
 	/* Initialize the first row and column of the score matrix H ([N+1]x[M+1]). */
+	int i;
 	score_t H[N+1][M+1];
 	H[0][0] = (score_t) 0;
 	*n = N;
-	Init_Row_Loop: for (int i=1; i<=N; i++) {
+	Init_Row_Loop: for (i=1; i<=N; i++) {
 		H[i][0] = (score_t) 0;
-		// aligned_seq1[i] = (item_t) 0;
 		if (seq1[i] == 0) {
 			*n = i;
 			break;
 		}
 	}
 	*m = M;
-	Init_Col_Loop: for (int i=1; i<=M; i++) {
+	Init_Col_Loop: for (i=1; i<=M; i++) {
 		H[0][i] = (score_t) 0;
-		// aligned_seq2[i] = (item_t) 0;
 		if (seq2[i] == 0) {
 			*m = i;
 			break;
@@ -61,10 +60,11 @@ score_t max(score_t a, score_t b, score_t c, score_t d) {
 	return max;
 }
 
-void strrev(char *s) {
+void strrev(char *s, const int len) {
 	int i = 0;
-	int j = strlen(s)-1;
+	int j = len-1;
 	while(i<j){
+		#pragma HLS loop_tripcount min=50 max=50 avg=50
 		int temp = s[i];
 		s[i] = s[j];
 		s[j] = temp;
@@ -81,12 +81,13 @@ void align(
 	score_t H[N+1][M+1],
 	int pos[2])
 {
+	int i, j;
 	score_t max_score, diag_score, right_score, down_score;
 	max_score = (score_t) 0;
 	pos[0] = 0;
 	pos[1] = 0;
-	Align_Row_Loop: for (int i=1; i<=n; i++) {
-		Align_Col_Loop: for (int j=1; j<=m; j++) {
+	Align_Row_Loop: for (i=1; i<=n; i++) {
+		Align_Col_Loop: for (j=1; j<=m; j++) {
 			diag_score = H[i-1][j-1];
 			if (seq1[i-1] == seq2[j-1]) {
 				diag_score += match_score;
@@ -97,14 +98,14 @@ void align(
 			right_score = H[i][j-1] + gap_score;
 			down_score = H[i-1][j] + gap_score;
 			H[i][j] = (score_t) max(0, diag_score, right_score, down_score);
-			// printf("%d ", H[i][j]);
+			//printf("%d ", H[i][j]);
 			if (max_score <= H[i][j]) {
 				max_score = H[i][j];
 				pos[0] = i;
 				pos[1] = j;
 			}
 		}
-		// printf("\n");
+		//printf("\n");
 	}
 }
 
@@ -124,8 +125,8 @@ void traceback(
 	int j = pos[1];
 	*l = 0;
 	Traceback_Loop: while ((i > 0) && (j > 0)) {
-		// printf("pos=(%d, %d)\n", i, j);
-		// printf("H=%d\n", H[i][j]);
+		#pragma HLS loop_tripcount min=200 max=200 avg=200
+		//printf("pos=(%d, %d) H=%d\n", i, j, H[i][j]);
 		if (!H[i][j]) {
 			break;
 		}
@@ -163,6 +164,6 @@ void traceback(
 	}
 	aligned_seq1[*l] = 0;
 	aligned_seq2[*l] = 0;
-	strrev(aligned_seq1);
-	strrev(aligned_seq2);
+	strrev(aligned_seq1, *l);
+	strrev(aligned_seq2, *l);
 }

@@ -1,0 +1,13 @@
+vhdl xil_defaultlib "AESL_sim_pkg.vhd"
+sv work "glbl.v"
+vhdl xil_defaultlib "SmithWaterman.vhd"
+vhdl xil_defaultlib "AESL_automem_seq2.vhd"
+vhdl xil_defaultlib "traceback.vhd"
+vhdl xil_defaultlib "AESL_automem_seq1.vhd"
+vhdl xil_defaultlib "AESL_automem_aligned_seq2.vhd"
+vhdl xil_defaultlib "align.vhd"
+vhdl xil_defaultlib "SmithWaterman.autotb.vhd"
+vhdl xil_defaultlib "AESL_automem_aligned_seq1.vhd"
+vhdl xil_defaultlib "SmithWaterman_mulbkb.vhd"
+vhdl xil_defaultlib "SmithWaterman_H.vhd"
+

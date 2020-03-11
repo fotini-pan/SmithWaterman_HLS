@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /home/foteini/Workspace/SmithWaterman_HLS/SW/sw_prj/naive_solution/./sim/autowrap/testbench/SmithWaterman.c_pre.c.tb.c

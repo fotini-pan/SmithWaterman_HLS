@@ -1,0 +1,244 @@
+
+
+================================================================
+== Vivado HLS Report for 'SmithWaterman'
+================================================================
+* Date:           Wed Mar 11 10:47:30 2020
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        sw_prj
+* Solution:       naive_solution
+* Product family: virtexuplus
+* Target device:  xcvu9p-fsgd2104-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 4.941 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+------+-------+---------+
+    |  Latency (cycles) |  Latency (absolute)  |   Interval   | Pipeline|
+    |   min   |   max   |    min    |    max   |  min |  max  |   Type  |
+    +---------+---------+-----------+----------+------+-------+---------+
+    |     1119|    31715| 11.190 us | 0.317 ms |  1119|  31715|   none  |
+    +---------+---------+-----------+----------+------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |                 |  Latency (cycles) | Iteration|  Initiation Interval  |   Trip  |          |
+        |    Loop Name    |   min   |   max   |  Latency |  achieved |   target  |  Count  | Pipelined|
+        +-----------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |- Init_Row_Loop  |        2|      201|         2|          -|          -| 1 ~ 100 |    no    |
+        |- Init_Col_Loop  |        2|      201|         2|          -|          -| 1 ~ 100 |    no    |
+        +-----------------+---------+---------+----------+-----------+-----------+---------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 9
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 2 4 
+4 --> 5 6 
+5 --> 6 4 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.15>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([100 x i8]* %seq1) nounwind, !map !31"   --->   Operation 10 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([100 x i8]* %seq2) nounwind, !map !37"   --->   Operation 11 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([100 x i8]* %aligned_seq1) nounwind, !map !41"   --->   Operation 12 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %n) nounwind, !map !45"   --->   Operation 13 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([100 x i8]* %aligned_seq2) nounwind, !map !51"   --->   Operation 14 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %m) nounwind, !map !55"   --->   Operation 15 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %l) nounwind, !map !59"   --->   Operation 16 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([14 x i8]* @SmithWaterman_str) nounwind"   --->   Operation 17 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%H = alloca [10201 x i32], align 4" [SmithWaterman.c:22]   --->   Operation 18 'alloca' 'H' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.61> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 100> <RAM>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%H_addr = getelementptr [10201 x i32]* %H, i64 0, i64 0" [SmithWaterman.c:23]   --->   Operation 19 'getelementptr' 'H_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (1.15ns)   --->   "store i32 0, i32* %H_addr, align 16" [SmithWaterman.c:23]   --->   Operation 20 'store' <Predicate = true> <Delay = 1.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.61> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 100> <RAM>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %n, i32 100) nounwind" [SmithWaterman.c:24]   --->   Operation 21 'write' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.60ns)   --->   "br label %1" [SmithWaterman.c:25]   --->   Operation 22 'br' <Predicate = true> <Delay = 0.60>
+
+State 2 <SV = 1> <Delay = 0.61>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%i_0 = phi i7 [ 1, %0 ], [ %i, %4 ]"   --->   Operation 23 'phi' 'i_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.59ns)   --->   "%icmp_ln25 = icmp ult i7 %i_0, -27" [SmithWaterman.c:25]   --->   Operation 24 'icmp' 'icmp_ln25' <Predicate = true> <Delay = 0.59> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.58> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 1, i64 100, i64 50)"   --->   Operation 25 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "br i1 %icmp_ln25, label %2, label %.loopexit1.loopexit" [SmithWaterman.c:25]   --->   Operation 26 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%zext_ln26 = zext i7 %i_0 to i64" [SmithWaterman.c:26]   --->   Operation 27 'zext' 'zext_ln26' <Predicate = (icmp_ln25)> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%seq1_addr = getelementptr [100 x i8]* %seq1, i64 0, i64 %zext_ln26" [SmithWaterman.c:27]   --->   Operation 28 'getelementptr' 'seq1_addr' <Predicate = (icmp_ln25)> <Delay = 0.00>
+ST_2 : Operation 29 [2/2] (0.61ns)   --->   "%seq1_load = load i8* %seq1_addr, align 1" [SmithWaterman.c:27]   --->   Operation 29 'load' 'seq1_load' <Predicate = (icmp_ln25)> <Delay = 0.61> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.61> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 100> <RAM>
+ST_2 : Operation 30 [1/1] (0.60ns)   --->   "br label %.loopexit1"   --->   Operation 30 'br' <Predicate = (!icmp_ln25)> <Delay = 0.60>
+
+State 3 <SV = 2> <Delay = 2.70>
+ST_3 : Operation 31 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([14 x i8]* @p_str) nounwind" [SmithWaterman.c:25]   --->   Operation 31 'specloopname' <Predicate = (icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 32 [1/1] (0.00ns)   --->   "%zext_ln26_1 = zext i7 %i_0 to i15" [SmithWaterman.c:26]   --->   Operation 32 'zext' 'zext_ln26_1' <Predicate = (icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 33 [1/1] (1.55ns)   --->   "%mul_ln26 = mul i15 %zext_ln26_1, 101" [SmithWaterman.c:26]   --->   Operation 33 'mul' 'mul_ln26' <Predicate = (icmp_ln25)> <Delay = 1.55> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 1.55> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 34 [1/1] (0.00ns)   --->   "%zext_ln26_2 = zext i15 %mul_ln26 to i64" [SmithWaterman.c:26]   --->   Operation 34 'zext' 'zext_ln26_2' <Predicate = (icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 35 [1/1] (0.00ns)   --->   "%H_addr_7 = getelementptr [10201 x i32]* %H, i64 0, i64 %zext_ln26_2" [SmithWaterman.c:26]   --->   Operation 35 'getelementptr' 'H_addr_7' <Predicate = (icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 36 [1/1] (1.15ns)   --->   "store i32 0, i32* %H_addr_7, align 4" [SmithWaterman.c:26]   --->   Operation 36 'store' <Predicate = (icmp_ln25)> <Delay = 1.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.61> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 100> <RAM>
+ST_3 : Operation 37 [1/2] (0.61ns)   --->   "%seq1_load = load i8* %seq1_addr, align 1" [SmithWaterman.c:27]   --->   Operation 37 'load' 'seq1_load' <Predicate = (icmp_ln25)> <Delay = 0.61> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.61> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 100> <RAM>
+ST_3 : Operation 38 [1/1] (0.58ns)   --->   "%icmp_ln27 = icmp eq i8 %seq1_load, 0" [SmithWaterman.c:27]   --->   Operation 38 'icmp' 'icmp_ln27' <Predicate = (icmp_ln25)> <Delay = 0.58> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.58> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 39 [1/1] (0.00ns)   --->   "br i1 %icmp_ln27, label %3, label %4" [SmithWaterman.c:27]   --->   Operation 39 'br' <Predicate = (icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 40 [1/1] (0.40ns)   --->   "%i = add i7 %i_0, 1" [SmithWaterman.c:25]   --->   Operation 40 'add' 'i' <Predicate = (icmp_ln25 & !icmp_ln27)> <Delay = 0.40> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.40> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 41 [1/1] (0.00ns)   --->   "br label %1" [SmithWaterman.c:25]   --->   Operation 41 'br' <Predicate = (icmp_ln25 & !icmp_ln27)> <Delay = 0.00>
+ST_3 : Operation 42 [1/1] (0.00ns)   --->   "%zext_ln25 = zext i7 %i_0 to i32" [SmithWaterman.c:25]   --->   Operation 42 'zext' 'zext_ln25' <Predicate = (icmp_ln25 & icmp_ln27)> <Delay = 0.00>
+ST_3 : Operation 43 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %n, i32 %zext_ln25) nounwind" [SmithWaterman.c:28]   --->   Operation 43 'write' <Predicate = (icmp_ln25 & icmp_ln27)> <Delay = 0.00>
+ST_3 : Operation 44 [1/1] (0.60ns)   --->   "br label %.loopexit1" [SmithWaterman.c:29]   --->   Operation 44 'br' <Predicate = (icmp_ln25 & icmp_ln27)> <Delay = 0.60>
+ST_3 : Operation 45 [1/1] (0.00ns)   --->   "%n_load = phi i7 [ %i_0, %3 ], [ -28, %.loopexit1.loopexit ]" [SmithWaterman.c:25]   --->   Operation 45 'phi' 'n_load' <Predicate = (icmp_ln27) | (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 46 [1/1] (0.60ns)   --->   "br label %5" [SmithWaterman.c:33]   --->   Operation 46 'br' <Predicate = (icmp_ln27) | (!icmp_ln25)> <Delay = 0.60>
+
+State 4 <SV = 3> <Delay = 1.20>
+ST_4 : Operation 47 [1/1] (0.00ns)   --->   "%i_1 = phi i7 [ 1, %.loopexit1 ], [ %i_3, %7 ]"   --->   Operation 47 'phi' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 48 [1/1] (0.59ns)   --->   "%icmp_ln33 = icmp ult i7 %i_1, -27" [SmithWaterman.c:33]   --->   Operation 48 'icmp' 'icmp_ln33' <Predicate = true> <Delay = 0.59> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.58> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 49 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 1, i64 100, i64 50)"   --->   Operation 49 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 50 [1/1] (0.60ns)   --->   "br i1 %icmp_ln33, label %6, label %.loopexit" [SmithWaterman.c:33]   --->   Operation 50 'br' <Predicate = true> <Delay = 0.60>
+ST_4 : Operation 51 [1/1] (0.00ns)   --->   "%zext_ln34 = zext i7 %i_1 to i64" [SmithWaterman.c:34]   --->   Operation 51 'zext' 'zext_ln34' <Predicate = (icmp_ln33)> <Delay = 0.00>
+ST_4 : Operation 52 [1/1] (0.00ns)   --->   "%H_addr_8 = getelementptr [10201 x i32]* %H, i64 0, i64 %zext_ln34" [SmithWaterman.c:34]   --->   Operation 52 'getelementptr' 'H_addr_8' <Predicate = (icmp_ln33)> <Delay = 0.00>
+ST_4 : Operation 53 [1/1] (1.15ns)   --->   "store i32 0, i32* %H_addr_8, align 4" [SmithWaterman.c:34]   --->   Operation 53 'store' <Predicate = (icmp_ln33)> <Delay = 1.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.61> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 100> <RAM>
+ST_4 : Operation 54 [1/1] (0.00ns)   --->   "%seq2_addr = getelementptr [100 x i8]* %seq2, i64 0, i64 %zext_ln34" [SmithWaterman.c:35]   --->   Operation 54 'getelementptr' 'seq2_addr' <Predicate = (icmp_ln33)> <Delay = 0.00>
+ST_4 : Operation 55 [2/2] (0.61ns)   --->   "%seq2_load = load i8* %seq2_addr, align 1" [SmithWaterman.c:35]   --->   Operation 55 'load' 'seq2_load' <Predicate = (icmp_ln33)> <Delay = 0.61> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.61> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 100> <RAM>
+
+State 5 <SV = 4> <Delay = 1.79>
+ST_5 : Operation 56 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([14 x i8]* @p_str1) nounwind" [SmithWaterman.c:33]   --->   Operation 56 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 57 [1/2] (0.61ns)   --->   "%seq2_load = load i8* %seq2_addr, align 1" [SmithWaterman.c:35]   --->   Operation 57 'load' 'seq2_load' <Predicate = true> <Delay = 0.61> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.61> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 100> <RAM>
+ST_5 : Operation 58 [1/1] (0.58ns)   --->   "%icmp_ln35 = icmp eq i8 %seq2_load, 0" [SmithWaterman.c:35]   --->   Operation 58 'icmp' 'icmp_ln35' <Predicate = true> <Delay = 0.58> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.58> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 59 [1/1] (0.60ns)   --->   "br i1 %icmp_ln35, label %.loopexit, label %7" [SmithWaterman.c:35]   --->   Operation 59 'br' <Predicate = true> <Delay = 0.60>
+ST_5 : Operation 60 [1/1] (0.40ns)   --->   "%i_3 = add i7 %i_1, 1" [SmithWaterman.c:33]   --->   Operation 60 'add' 'i_3' <Predicate = (!icmp_ln35)> <Delay = 0.40> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.40> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 61 [1/1] (0.00ns)   --->   "br label %5" [SmithWaterman.c:33]   --->   Operation 61 'br' <Predicate = (!icmp_ln35)> <Delay = 0.00>
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 62 [1/1] (0.00ns)   --->   "%m_local_0 = phi i7 [ %i_1, %6 ], [ -28, %5 ]" [SmithWaterman.c:33]   --->   Operation 62 'phi' 'm_local_0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 63 [1/1] (0.00ns)   --->   "%zext_ln43 = zext i7 %m_local_0 to i32" [SmithWaterman.c:43]   --->   Operation 63 'zext' 'zext_ln43' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 64 [2/2] (0.00ns)   --->   "%align_ret2 = call fastcc { i32, i32 } @align([100 x i8]* %seq1, i7 %n_load, [100 x i8]* %seq2, i7 %m_local_0, [10201 x i32]* %H) nounwind" [SmithWaterman.c:43]   --->   Operation 64 'call' 'align_ret2' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 65 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %m, i32 %zext_ln43) nounwind" [SmithWaterman.c:43]   --->   Operation 65 'write' <Predicate = true> <Delay = 0.00>
+
+State 7 <SV = 6> <Delay = 0.00>
+ST_7 : Operation 66 [1/2] (0.00ns)   --->   "%align_ret2 = call fastcc { i32, i32 } @align([100 x i8]* %seq1, i7 %n_load, [100 x i8]* %seq2, i7 %m_local_0, [10201 x i32]* %H) nounwind" [SmithWaterman.c:43]   --->   Operation 66 'call' 'align_ret2' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 67 [1/1] (0.00ns)   --->   "%pos_0 = extractvalue { i32, i32 } %align_ret2, 0" [SmithWaterman.c:43]   --->   Operation 67 'extractvalue' 'pos_0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 68 [1/1] (0.00ns)   --->   "%pos_1 = extractvalue { i32, i32 } %align_ret2, 1" [SmithWaterman.c:43]   --->   Operation 68 'extractvalue' 'pos_1' <Predicate = true> <Delay = 0.00>
+
+State 8 <SV = 7> <Delay = 0.60>
+ST_8 : Operation 69 [2/2] (0.60ns)   --->   "%call_ret1 = call fastcc i32 @traceback([100 x i8]* %seq1, [100 x i8]* %seq2, [10201 x i32]* %H, i32 %pos_0, i32 %pos_1, [100 x i8]* %aligned_seq1, [100 x i8]* %aligned_seq2) nounwind" [SmithWaterman.c:46]   --->   Operation 69 'call' 'call_ret1' <Predicate = true> <Delay = 0.60> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 0.00>
+ST_9 : Operation 70 [1/2] (0.00ns)   --->   "%call_ret1 = call fastcc i32 @traceback([100 x i8]* %seq1, [100 x i8]* %seq2, [10201 x i32]* %H, i32 %pos_0, i32 %pos_1, [100 x i8]* %aligned_seq1, [100 x i8]* %aligned_seq2) nounwind" [SmithWaterman.c:46]   --->   Operation 70 'call' 'call_ret1' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_9 : Operation 71 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %l, i32 %call_ret1) nounwind" [SmithWaterman.c:46]   --->   Operation 71 'write' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 72 [1/1] (0.00ns)   --->   "ret void" [SmithWaterman.c:47]   --->   Operation 72 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.16ns
+The critical path consists of the following:
+	'alloca' operation ('H', SmithWaterman.c:22) [16]  (0 ns)
+	'getelementptr' operation ('H_addr', SmithWaterman.c:23) [17]  (0 ns)
+	'store' operation ('store_ln23', SmithWaterman.c:23) of constant 0 on array 'H', SmithWaterman.c:22 [18]  (1.16 ns)
+
+ <State 2>: 0.615ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', SmithWaterman.c:25) [22]  (0 ns)
+	'getelementptr' operation ('seq1_addr', SmithWaterman.c:27) [34]  (0 ns)
+	'load' operation ('seq1_load', SmithWaterman.c:27) on array 'seq1' [35]  (0.615 ns)
+
+ <State 3>: 2.71ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln26', SmithWaterman.c:26) [30]  (1.55 ns)
+	'getelementptr' operation ('H_addr_7', SmithWaterman.c:26) [32]  (0 ns)
+	'store' operation ('store_ln26', SmithWaterman.c:26) of constant 0 on array 'H', SmithWaterman.c:22 [33]  (1.16 ns)
+
+ <State 4>: 1.2ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', SmithWaterman.c:33) [51]  (0 ns)
+	'icmp' operation ('icmp_ln33', SmithWaterman.c:33) [52]  (0.6 ns)
+	multiplexor before 'phi' operation ('m_local_0', SmithWaterman.c:33) with incoming values : ('i', SmithWaterman.c:33) [68]  (0.603 ns)
+
+ <State 5>: 1.8ns
+The critical path consists of the following:
+	'load' operation ('seq2_load', SmithWaterman.c:35) on array 'seq2' [61]  (0.615 ns)
+	'icmp' operation ('icmp_ln35', SmithWaterman.c:35) [62]  (0.581 ns)
+	multiplexor before 'phi' operation ('m_local_0', SmithWaterman.c:33) with incoming values : ('i', SmithWaterman.c:33) [68]  (0.603 ns)
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+ <State 7>: 0ns
+The critical path consists of the following:
+
+ <State 8>: 0.603ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', SmithWaterman.c:46) to 'traceback' [73]  (0.603 ns)
+
+ <State 9>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

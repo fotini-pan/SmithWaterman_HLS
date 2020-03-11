@@ -1,0 +1,15 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../../../SmithWaterman.c in debug mode
+INFO: [HLS 200-10] Running '/fasthome/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'foteini' on host 'leoforos' (Linux_x86_64 version 3.10.0-862.6.3.el7.x86_64) on Wed Mar 11 10:45:58 EET 2020
+INFO: [HLS 200-10] On os "CentOS Linux release 7.5.1804 (Core) "
+INFO: [HLS 200-10] In directory '/home/foteini/Workspace/SmithWaterman_HLS/SW/sw_prj/naive_solution/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_foteini/97621583916358227138
+INFO: [APCC 202-1] APCC is done.
+   Generating csim.exe
+*******************************************
+PASS: The output matches the golden output!
+*******************************************
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

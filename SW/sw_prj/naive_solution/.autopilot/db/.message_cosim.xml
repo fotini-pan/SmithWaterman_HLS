@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[COSIM 212-47]" key="COSIM_TCL_47_1115" tag="" content="Using XSIM for RTL simulation."/>
+	<Message severity="INFO" prefix="[COSIM 212-14]" key="COSIM_TCL_14_1084" tag="" content="Instrumenting C test bench ..."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;/fasthome/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/apcc&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;foteini&apos; on host &apos;leoforos&apos; (Linux_x86_64 version 3.10.0-862.6.3.el7.x86_64) on Wed Mar 11 10:56:20 EET 2020"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1429" tag="" content="On os &quot;CentOS Linux release 7.5.1804 (Core) &quot;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;/home/foteini/Workspace/SmithWaterman_HLS/SW/sw_prj/naive_solution/sim/wrapc&apos;"/>
+	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is /tmp/apcc_db_foteini/56491583916980966792"/>
+	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;/fasthome/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/apcc&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;foteini&apos; on host &apos;leoforos&apos; (Linux_x86_64 version 3.10.0-862.6.3.el7.x86_64) on Wed Mar 11 10:56:28 EET 2020"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1429" tag="" content="On os &quot;CentOS Linux release 7.5.1804 (Core) &quot;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;/home/foteini/Workspace/SmithWaterman_HLS/SW/sw_prj/naive_solution/sim/wrapc&apos;"/>
+	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is /tmp/apcc_db_foteini/60791583916988233107"/>
+	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done."/>
+	<Message severity="INFO" prefix="[COSIM 212-302]" key="COSIM_TCL_302_1177" tag="" content="Starting C TB testing ..."/>
+	<Message severity="INFO" prefix="[COSIM 212-333]" key="COSIM_TCL_333_1204" tag="" content="Generating C post check test bench ..."/>
+	<Message severity="INFO" prefix="[COSIM 212-12]" key="COSIM_TCL_12_1082" tag="" content="Generating RTL test bench ..."/>
+	<Message severity="INFO" prefix="[COSIM 212-1]" key="COSIM_TCL_1_1071" tag="" content="*** C/RTL co-simulation file generation completed. ***"/>
+	<Message severity="INFO" prefix="[COSIM 212-322]" key="COSIM_TCL_322_1194" tag="" content="Starting VHDL simulation."/>
+	<Message severity="INFO" prefix="[COSIM 212-15]" key="COSIM_TCL_15_1085" tag="" content="Starting XSIM ..."/>
+	<Message severity="INFO" prefix="[COSIM 212-316]" key="COSIM_TCL_316_1188" tag="" content="Starting C post checking ..."/>
+	<Message severity="INFO" prefix="[COSIM 212-1000]" key="COSIM_TCL_1000_1070" tag="" content="*** C/RTL co-simulation finished: PASS ***"/>
+</Messages>

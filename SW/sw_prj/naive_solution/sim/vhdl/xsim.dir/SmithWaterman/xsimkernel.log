@@ -1,0 +1,7 @@
+Running: xsim.dir/SmithWaterman/xsimk -simmode gui -wdb SmithWaterman.wdb -simrunnum 0 -socket 43638
+Design successfully loaded
+Design Loading Memory Usage: 37088 KB (Peak: 37088 KB)
+Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 119024 KB (Peak: 176360 KB)
+Simulation CPU Usage: 50 ms

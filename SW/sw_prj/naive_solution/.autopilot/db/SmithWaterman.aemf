@@ -1,0 +1,781 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1583916451000">
+  <ports id="1" name="seq1" type="PortType" originalName="seq1" coreName="RAM" bitwidth="8" iftype="IfTypeRegister" arraysize="100">
+    <dataOutputObjs>call</dataOutputObjs>
+    <dataOutputObjs>call</dataOutputObjs>
+    <dataOutputObjs>load</dataOutputObjs>
+  </ports>
+  <ports id="2" name="seq2" type="PortType" originalName="seq2" coreName="RAM" bitwidth="8" iftype="IfTypeRegister" arraysize="100">
+    <dataOutputObjs>call</dataOutputObjs>
+    <dataOutputObjs>call</dataOutputObjs>
+    <dataOutputObjs>load</dataOutputObjs>
+  </ports>
+  <ports id="3" name="aligned_seq1" type="PortType" originalName="aligned_seq1" coreName="RAM" bitwidth="8" direction="DirInOut" iftype="IfTypeRegister" arraysize="100">
+    <dataInputObjs>call</dataInputObjs>
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="4" name="n" type="PortType" originalName="n" bitwidth="32" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="5" name="aligned_seq2" type="PortType" originalName="aligned_seq2" coreName="RAM" bitwidth="8" direction="DirInOut" iftype="IfTypeRegister" arraysize="100">
+    <dataInputObjs>call</dataInputObjs>
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="6" name="m" type="PortType" originalName="m" bitwidth="32" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="7" name="l" type="PortType" originalName="l" bitwidth="32" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <edges id="89" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@ports.3"/>
+  <edges id="92" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="95" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="96" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.1/@node_objs.0" is_back_edge="1"/>
+  <edges id="97" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.1/@node_objs.0" is_back_edge="1"/>
+  <edges id="98" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="101" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="102" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="103" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="119" source_obj="//@blocks.2/@node_objs.2" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="122" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@blocks.2/@node_objs.4"/>
+  <edges id="123" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.2/@node_objs.4"/>
+  <edges id="124" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.2/@node_objs.4"/>
+  <edges id="127" source_obj="//@blocks.4/@node_objs.0" sink_obj="//@ports.3"/>
+  <edges id="129" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.4/@node_objs.1"/>
+  <edges id="130" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="132" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.3/@node_objs.1"/>
+  <edges id="133" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.5/@node_objs.0"/>
+  <edges id="134" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.6/@node_objs.0"/>
+  <edges id="135" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.6/@node_objs.0"/>
+  <edges id="138" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.6/@node_objs.0"/>
+  <edges id="139" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.6/@node_objs.1"/>
+  <edges id="141" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.7/@node_objs.0"/>
+  <edges id="142" source_obj="//@blocks.9/@node_objs.0" sink_obj="//@blocks.7/@node_objs.0" is_back_edge="1"/>
+  <edges id="143" edge_type="CtrlEdge" source_obj="//@blocks.9" sink_obj="//@blocks.7/@node_objs.0" is_back_edge="1"/>
+  <edges id="144" source_obj="//@blocks.7/@node_objs.0" sink_obj="//@blocks.7/@node_objs.1"/>
+  <edges id="146" source_obj="//@blocks.7/@node_objs.1" sink_obj="//@blocks.7/@node_objs.2"/>
+  <edges id="147" edge_type="CtrlEdge" source_obj="//@blocks.10" sink_obj="//@blocks.7/@node_objs.2"/>
+  <edges id="148" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.7/@node_objs.2"/>
+  <edges id="159" source_obj="//@blocks.8/@node_objs.1" sink_obj="//@blocks.8/@node_objs.2"/>
+  <edges id="161" source_obj="//@blocks.8/@node_objs.2" sink_obj="//@blocks.8/@node_objs.3"/>
+  <edges id="162" edge_type="CtrlEdge" source_obj="//@blocks.9" sink_obj="//@blocks.8/@node_objs.3"/>
+  <edges id="163" edge_type="CtrlEdge" source_obj="//@blocks.10" sink_obj="//@blocks.8/@node_objs.3"/>
+  <edges id="164" source_obj="//@blocks.7/@node_objs.0" sink_obj="//@blocks.9/@node_objs.0"/>
+  <edges id="166" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.9/@node_objs.1"/>
+  <edges id="167" source_obj="//@blocks.7/@node_objs.0" sink_obj="//@blocks.10/@node_objs.0"/>
+  <edges id="168" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.10/@node_objs.0"/>
+  <edges id="170" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.10/@node_objs.0"/>
+  <edges id="174" source_obj="//@ports.0" sink_obj="//@blocks.10/@node_objs.1"/>
+  <edges id="175" source_obj="//@blocks.6/@node_objs.0" sink_obj="//@blocks.10/@node_objs.1"/>
+  <edges id="176" source_obj="//@ports.1" sink_obj="//@blocks.10/@node_objs.1"/>
+  <edges id="177" source_obj="//@blocks.10/@node_objs.0" sink_obj="//@blocks.10/@node_objs.1"/>
+  <edges id="178" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.10/@node_objs.1"/>
+  <edges id="183" source_obj="//@ports.0" sink_obj="//@blocks.10/@node_objs.2"/>
+  <edges id="184" source_obj="//@ports.1" sink_obj="//@blocks.10/@node_objs.2"/>
+  <edges id="185" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.10/@node_objs.2"/>
+  <edges id="188" source_obj="//@ports.2" sink_obj="//@blocks.10/@node_objs.2"/>
+  <edges id="189" source_obj="//@ports.4" sink_obj="//@blocks.10/@node_objs.2"/>
+  <edges id="191" source_obj="//@blocks.10/@node_objs.3" sink_obj="//@ports.6"/>
+  <edges id="192" source_obj="//@blocks.10/@node_objs.2" sink_obj="//@blocks.10/@node_objs.3"/>
+  <edges id="194" source_obj="//@blocks.10/@node_objs.4" sink_obj="//@ports.5"/>
+  <edges id="236" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="237" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2"/>
+  <edges id="238" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.5"/>
+  <edges id="239" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.4"/>
+  <edges id="240" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3"/>
+  <edges id="241" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.1" is_back_edge="1"/>
+  <edges id="242" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.6"/>
+  <edges id="243" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.6"/>
+  <edges id="244" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.7"/>
+  <edges id="245" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.8"/>
+  <edges id="246" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.10"/>
+  <edges id="247" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.10"/>
+  <edges id="248" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.9"/>
+  <edges id="249" edge_type="CtrlEdge" source_obj="//@blocks.9" sink_obj="//@blocks.7" is_back_edge="1"/>
+  <edges id="-1" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="-1" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.2"/>
+  <edges id="-1" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="-1" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="-1" source_obj="//@ports.0" sink_obj="//@blocks.2/@node_objs.2"/>
+  <edges id="-1" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.4/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.7/@node_objs.0" sink_obj="//@blocks.8/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.7/@node_objs.0" sink_obj="//@blocks.8/@node_objs.1"/>
+  <edges id="-1" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.8/@node_objs.0"/>
+  <edges id="-1" source_obj="//@ports.1" sink_obj="//@blocks.8/@node_objs.1"/>
+  <edges id="-1" source_obj="//@blocks.10/@node_objs.0" sink_obj="//@blocks.10/@node_objs.4"/>
+  <edges id="-1" source_obj="//@blocks.10/@node_objs.1" sink_obj="//@blocks.10/@node_objs.2"/>
+  <edges id="-1" source_obj="//@blocks.10/@node_objs.1" sink_obj="//@blocks.10/@node_objs.2"/>
+  <edges id="-188" source_obj="//@blocks.10/@node_objs.2" sink_obj="//@ports.2"/>
+  <edges id="-189" source_obj="//@blocks.10/@node_objs.2" sink_obj="//@ports.4"/>
+  <blocks id="21" name="block_21" type="BlockType">
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_26</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="H" lineNumber="22" originalName="H" fileName="SmithWaterman.c" fileDirectory=".." rtlName="H_U" coreName="RAM" contextFuncName="SmithWaterman" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="SmithWaterman.c" linenumber="22" fileDirectory="/home/foteini/Workspace/SmithWaterman_HLS/SW" functionName="SmithWaterman"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="H_addr_write_ln23" lineNumber="23" fileName="SmithWaterman.c" fileDirectory=".." contextFuncName="SmithWaterman" opcode="store" m_display="0" m_delay="1.15" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="SmithWaterman.c" linenumber="23" fileDirectory="/home/foteini/Workspace/SmithWaterman_HLS/SW" functionName="SmithWaterman"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="n_write_ln24" lineNumber="24" fileName="SmithWaterman.c" fileDirectory=".." contextFuncName="SmithWaterman" opcode="write" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="SmithWaterman.c" linenumber="24" fileDirectory="/home/foteini/Workspace/SmithWaterman_HLS/SW" functionName="SmithWaterman"/>
+      <dataOutputObjs>n</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="_ln25" lineNumber="25" fileName="SmithWaterman.c" fileDirectory=".." contextFuncName="SmithWaterman" opcode="br" m_display="0" m_delay="0.6" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="SmithWaterman.c" linenumber="25" fileDirectory="/home/foteini/Workspace/SmithWaterman_HLS/SW" functionName="SmithWaterman"/>
+      <controlInputObjs>block_26</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="SmithWaterman.c">
+      <validLinenumbers>22</validLinenumbers>
+      <validLinenumbers>23</validLinenumbers>
+      <validLinenumbers>24</validLinenumbers>
+      <validLinenumbers>25</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="26" name="block_26" type="BlockType">
+    <controlInputObjs>block_21</controlInputObjs>
+    <controlInputObjs>block_41</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_38</controlOutputObjs>
+    <controlOutputObjs>.loopexit1.loopexit</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="i_0" originalName="i" bitwidth="7" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+      <controlInputObjs>block_21</controlInputObjs>
+      <controlInputObjs>block_41</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="icmp_ln25" lineNumber="25" fileName="SmithWaterman.c" fileDirectory=".." rtlName="icmp_ln25_fu_216_p2" contextFuncName="SmithWaterman" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.59" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="SmithWaterman.c" linenumber="25" fileDirectory="/home/foteini/Workspace/SmithWaterman_HLS/SW" functionName="SmithWaterman"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="_ln25" lineNumber="25" fileName="SmithWaterman.c" fileDirectory=".." contextFuncName="SmithWaterman" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="SmithWaterman.c" linenumber="25" fileDirectory="/home/foteini/Workspace/SmithWaterman_HLS/SW" functionName="SmithWaterman"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>.loopexit1.loopexit</controlInputObjs>
+      <controlInputObjs>block_38</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="SmithWaterman.c">
+      <validLinenumbers>25</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="38" name="block_38" type="BlockType">
+    <controlInputObjs>block_26</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_45</controlOutputObjs>
+    <controlOutputObjs>block_41</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="mul_ln26" lineNumber="26" fileName="SmithWaterman.c" fileDirectory=".." rtlName="mul_ln26_fu_231_p2" contextFuncName="SmithWaterman" bitwidth="15" opcode="mul" nodeLabel="2.0" m_display="0" m_delay="1.55" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="SmithWaterman.c" linenumber="26" fileDirectory="/home/foteini/Workspace/SmithWaterman_HLS/SW" functionName="SmithWaterman"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="H_addr_7_write_ln26" lineNumber="26" fileName="SmithWaterman.c" fileDirectory=".." contextFuncName="SmithWaterman" opcode="store" nodeLabel="2.0" m_display="0" m_delay="1.15" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="SmithWaterman.c" linenumber="26" fileDirectory="/home/foteini/Workspace/SmithWaterman_HLS/SW" functionName="SmithWaterman"/>
+      <dataInputObjs>mul</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="seq1_load" lineNumber="27" fileName="SmithWaterman.c" fileDirectory=".." contextFuncName="SmithWaterman" bitwidth="8" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="0.61" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="SmithWaterman.c" linenumber="27" fileDirectory="/home/foteini/Workspace/SmithWaterman_HLS/SW" functionName="SmithWaterman"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>seq1</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="icmp_ln27" lineNumber="27" fileName="SmithWaterman.c" fileDirectory=".." rtlName="icmp_ln27_fu_242_p2" contextFuncName="SmithWaterman" bitwidth="1" opcode="icmp" nodeLabel="2.0" m_display="0" m_delay="0.58" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="SmithWaterman.c" linenumber="27" fileDirectory="/home/foteini/Workspace/SmithWaterman_HLS/SW" functionName="SmithWaterman"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="_ln27" lineNumber="27" fileName="SmithWaterman.c" fileDirectory=".." contextFuncName="SmithWaterman" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="SmithWaterman.c" linenumber="27" fileDirectory="/home/foteini/Workspace/SmithWaterman_HLS/SW" functionName="SmithWaterman"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>block_41</controlInputObjs>
+      <controlInputObjs>block_45</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="SmithWaterman.c">
+      <validLinenumbers>26</validLinenumbers>
+      <validLinenumbers>27</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="41" name="block_41" type="BlockType">
+    <controlInputObjs>block_38</controlInputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_26</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="i" lineNumber="25" originalName="i" fileName="SmithWaterman.c" fileDirectory=".." rtlName="i_fu_248_p2" contextFuncName="SmithWaterman" bitwidth="7" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.4" m_topoIndex="20" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="SmithWaterman.c" linenumber="25" fileDirectory="/home/foteini/Workspace/SmithWaterman_HLS/SW" functionName="SmithWaterman"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="_ln25" lineNumber="25" fileName="SmithWaterman.c" fileDirectory=".." contextFuncName="SmithWaterman" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="SmithWaterman.c" linenumber="25" fileDirectory="/home/foteini/Workspace/SmithWaterman_HLS/SW" functionName="SmithWaterman"/>
+      <controlInputObjs>block_26</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="SmithWaterman.c">
+      <validLinenumbers>25</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="45" name="block_45" type="BlockType">
+    <controlInputObjs>block_38</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>.loopexit1</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="n_write_ln28" lineNumber="28" fileName="SmithWaterman.c" fileDirectory=".." contextFuncName="SmithWaterman" opcode="write" nodeLabel="2.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="SmithWaterman.c" linenumber="28" fileDirectory="/home/foteini/Workspace/SmithWaterman_HLS/SW" functionName="SmithWaterman"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>n</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="_ln29" lineNumber="29" fileName="SmithWaterman.c" fileDirectory=".." contextFuncName="SmithWaterman" opcode="br" nodeLabel="2.0" m_display="0" m_delay="0.6" m_topoIndex="24" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="SmithWaterman.c" linenumber="29" fileDirectory="/home/foteini/Workspace/SmithWaterman_HLS/SW" functionName="SmithWaterman"/>
+      <controlInputObjs>.loopexit1</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="SmithWaterman.c">
+      <validLinenumbers>28</validLinenumbers>
+      <validLinenumbers>29</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="47" name=".loopexit1.loopexit" type="BlockType">
+    <controlInputObjs>block_26</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>.loopexit1</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="46" name="_ln0" opcode="br" nodeLabel="1.0" m_display="0" m_delay="0.6" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <controlInputObjs>.loopexit1</controlInputObjs>
+    </node_objs>
+  </blocks>
+  <blocks id="50" name=".loopexit1" type="BlockType">
+    <controlInputObjs>block_45</controlInputObjs>
+    <controlInputObjs>.loopexit1.loopexit</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_55</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="n_load" lineNumber="25" fileName="SmithWaterman.c" fileDirectory=".." contextFuncName="SmithWaterman" bitwidth="7" opcode="phi" nodeLabel="2.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="SmithWaterman.c" linenumber="25" fileDirectory="/home/foteini/Workspace/SmithWaterman_HLS/SW" functionName="SmithWaterman"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <controlInputObjs>block_45</controlInputObjs>
+      <controlInputObjs>.loopexit1.loopexit</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="_ln33" lineNumber="33" fileName="SmithWaterman.c" fileDirectory=".." contextFuncName="SmithWaterman" opcode="br" nodeLabel="2.0" m_display="0" m_delay="0.6" m_topoIndex="26" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="SmithWaterman.c" linenumber="33" fileDirectory="/home/foteini/Workspace/SmithWaterman_HLS/SW" functionName="SmithWaterman"/>
+      <controlInputObjs>block_55</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="SmithWaterman.c">
+      <validLinenumbers>25</validLinenumbers>
+      <validLinenumbers>33</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="55" name="block_55" type="BlockType">
+    <controlInputObjs>.loopexit1</controlInputObjs>
+    <controlInputObjs>block_67</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_64</controlOutputObjs>
+    <controlOutputObjs>.loopexit</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="51" name="i_1" originalName="i" bitwidth="7" opcode="phi" nodeLabel="3.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <controlInputObjs>.loopexit1</controlInputObjs>
+      <controlInputObjs>block_67</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="icmp_ln33" lineNumber="33" fileName="SmithWaterman.c" fileDirectory=".." rtlName="icmp_ln33_fu_259_p2" contextFuncName="SmithWaterman" bitwidth="1" opcode="icmp" nodeLabel="3.0" m_display="0" m_delay="0.59" m_topoIndex="28" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="SmithWaterman.c" linenumber="33" fileDirectory="/home/foteini/Workspace/SmithWaterman_HLS/SW" functionName="SmithWaterman"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="_ln33" lineNumber="33" fileName="SmithWaterman.c" fileDirectory=".." contextFuncName="SmithWaterman" opcode="br" nodeLabel="3.0" m_display="0" m_delay="0.6" m_topoIndex="29" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="SmithWaterman.c" linenumber="33" fileDirectory="/home/foteini/Workspace/SmithWaterman_HLS/SW" functionName="SmithWaterman"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>.loopexit</controlInputObjs>
+      <controlInputObjs>block_64</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="SmithWaterman.c">
+      <validLinenumbers>33</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="64" name="block_64" type="BlockType">
+    <controlInputObjs>block_55</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>.loopexit</controlOutputObjs>
+    <controlOutputObjs>block_67</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="H_addr_8_write_ln34" lineNumber="34" fileName="SmithWaterman.c" fileDirectory=".." contextFuncName="SmithWaterman" opcode="store" nodeLabel="3.0" m_display="0" m_delay="1.15" m_topoIndex="32" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="SmithWaterman.c" linenumber="34" fileDirectory="/home/foteini/Workspace/SmithWaterman_HLS/SW" functionName="SmithWaterman"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="seq2_load" lineNumber="35" fileName="SmithWaterman.c" fileDirectory=".." contextFuncName="SmithWaterman" bitwidth="8" opcode="load" nodeLabel="3.0" nodeLatency="1" m_display="0" m_delay="0.61" m_topoIndex="34" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="SmithWaterman.c" linenumber="35" fileDirectory="/home/foteini/Workspace/SmithWaterman_HLS/SW" functionName="SmithWaterman"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>seq2</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="62" name="icmp_ln35" lineNumber="35" fileName="SmithWaterman.c" fileDirectory=".." rtlName="icmp_ln35_fu_271_p2" contextFuncName="SmithWaterman" bitwidth="1" opcode="icmp" nodeLabel="4.0" m_display="0" m_delay="0.58" m_topoIndex="35" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="SmithWaterman.c" linenumber="35" fileDirectory="/home/foteini/Workspace/SmithWaterman_HLS/SW" functionName="SmithWaterman"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="_ln35" lineNumber="35" fileName="SmithWaterman.c" fileDirectory=".." contextFuncName="SmithWaterman" opcode="br" nodeLabel="4.0" m_display="0" m_delay="0.6" m_topoIndex="36" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="SmithWaterman.c" linenumber="35" fileDirectory="/home/foteini/Workspace/SmithWaterman_HLS/SW" functionName="SmithWaterman"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>block_67</controlInputObjs>
+      <controlInputObjs>.loopexit</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="SmithWaterman.c">
+      <validLinenumbers>34</validLinenumbers>
+      <validLinenumbers>35</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="67" name="block_67" type="BlockType">
+    <controlInputObjs>block_64</controlInputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_55</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="i_3" lineNumber="33" originalName="i" fileName="SmithWaterman.c" fileDirectory=".." rtlName="i_3_fu_277_p2" contextFuncName="SmithWaterman" bitwidth="7" opcode="add" nodeLabel="4.0" m_display="0" m_delay="0.4" m_topoIndex="37" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="SmithWaterman.c" linenumber="33" fileDirectory="/home/foteini/Workspace/SmithWaterman_HLS/SW" functionName="SmithWaterman"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="_ln33" lineNumber="33" fileName="SmithWaterman.c" fileDirectory=".." contextFuncName="SmithWaterman" opcode="br" nodeLabel="4.0" m_display="0" m_topoIndex="38" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="SmithWaterman.c" linenumber="33" fileDirectory="/home/foteini/Workspace/SmithWaterman_HLS/SW" functionName="SmithWaterman"/>
+      <controlInputObjs>block_55</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="SmithWaterman.c">
+      <validLinenumbers>33</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="77" name=".loopexit" type="BlockType">
+    <controlInputObjs>block_55</controlInputObjs>
+    <controlInputObjs>block_64</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="68" name="m_local_0" lineNumber="33" fileName="SmithWaterman.c" fileDirectory=".." contextFuncName="SmithWaterman" bitwidth="7" opcode="phi" nodeLabel="5.0" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="SmithWaterman.c" linenumber="33" fileDirectory="/home/foteini/Workspace/SmithWaterman_HLS/SW" functionName="SmithWaterman"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+      <controlInputObjs>block_64</controlInputObjs>
+      <controlInputObjs>block_55</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="70" name="align_ret2" lineNumber="43" fileName="SmithWaterman.c" fileDirectory=".." rtlName="grp_align_fu_203" contextFuncName="SmithWaterman" bitwidth="64" opcode="call" nodeLabel="5.0" nodeLatency="1" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="SmithWaterman.c" linenumber="43" fileDirectory="/home/foteini/Workspace/SmithWaterman_HLS/SW" functionName="SmithWaterman"/>
+      <dataInputObjs>seq1</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>seq2</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>align</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="73" name="call_ret1" lineNumber="46" fileName="SmithWaterman.c" fileDirectory=".." rtlName="grp_traceback_fu_187" contextFuncName="SmithWaterman" bitwidth="32" opcode="call" nodeLabel="7.0" nodeLatency="1" m_display="0" m_delay="0.6" m_topoIndex="45" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="SmithWaterman.c" linenumber="46" fileDirectory="/home/foteini/Workspace/SmithWaterman_HLS/SW" functionName="SmithWaterman"/>
+      <dataInputObjs>seq1</dataInputObjs>
+      <dataInputObjs>seq2</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>aligned_seq1</dataInputObjs>
+      <dataInputObjs>aligned_seq2</dataInputObjs>
+      <dataInputObjs>call</dataInputObjs>
+      <dataInputObjs>call</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+      <dataOutputObjs>aligned_seq1</dataOutputObjs>
+      <dataOutputObjs>aligned_seq2</dataOutputObjs>
+      <constName>traceback</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="74" name="l_write_ln46" lineNumber="46" fileName="SmithWaterman.c" fileDirectory=".." contextFuncName="SmithWaterman" opcode="write" nodeLabel="8.0" m_display="0" m_topoIndex="46" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="SmithWaterman.c" linenumber="46" fileDirectory="/home/foteini/Workspace/SmithWaterman_HLS/SW" functionName="SmithWaterman"/>
+      <dataInputObjs>call</dataInputObjs>
+      <dataOutputObjs>l</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="75" name="m_write_ln43" lineNumber="43" fileName="SmithWaterman.c" fileDirectory=".." contextFuncName="SmithWaterman" opcode="write" nodeLabel="5.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="SmithWaterman.c" linenumber="43" fileDirectory="/home/foteini/Workspace/SmithWaterman_HLS/SW" functionName="SmithWaterman"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>m</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="76" name="_ln47" lineNumber="47" fileName="SmithWaterman.c" fileDirectory=".." contextFuncName="SmithWaterman" opcode="ret" nodeLabel="8.0" m_display="0" m_topoIndex="47" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="SmithWaterman.c" linenumber="47" fileDirectory="/home/foteini/Workspace/SmithWaterman_HLS/SW" functionName="SmithWaterman"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="SmithWaterman.c">
+      <validLinenumbers>33</validLinenumbers>
+      <validLinenumbers>43</validLinenumbers>
+      <validLinenumbers>46</validLinenumbers>
+      <validLinenumbers>47</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <ScheduleInfo time="8"/>
+  <regnodes realName="i_1_reg_162">
+    <nodeIds>51</nodeIds>
+  </regnodes>
+  <regnodes realName="seq2_addr_reg_316">
+    <nodeIds>60</nodeIds>
+  </regnodes>
+  <regnodes realName="i_reg_308">
+    <nodeIds>39</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln25_reg_296">
+    <nodeIds>23</nodeIds>
+  </regnodes>
+  <regnodes realName="pos_1_reg_334">
+    <nodeIds>72</nodeIds>
+  </regnodes>
+  <regnodes realName="pos_0_reg_329">
+    <nodeIds>71</nodeIds>
+  </regnodes>
+  <regnodes realName="seq1_addr_reg_300">
+    <nodeIds>34</nodeIds>
+  </regnodes>
+  <regnodes realName="i_0_reg_137">
+    <nodeIds>22</nodeIds>
+  </regnodes>
+  <regnodes realName="m_local_0_reg_174">
+    <nodeIds>68</nodeIds>
+  </regnodes>
+  <regnodes realName="n_load_reg_149">
+    <nodeIds>48</nodeIds>
+  </regnodes>
+  <regnodes realName="i_3_reg_324">
+    <nodeIds>65</nodeIds>
+  </regnodes>
+  <expressionNodes realName="mul_ln26_fu_231">
+    <nodeIds>30</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="H_alloca_fu_56">
+    <nodeIds>16</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln27_fu_242">
+    <nodeIds>36</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="pos_1_fu_292">
+    <nodeIds>72</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln35_fu_271">
+    <nodeIds>62</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln26_1_fu_227">
+    <nodeIds>29</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="H_addr_8_gep_fu_117">
+    <nodeIds>58</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln26_fu_222">
+    <nodeIds>28</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln33_fu_259">
+    <nodeIds>52</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln43_fu_283">
+    <nodeIds>69</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln34_fu_265">
+    <nodeIds>57</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="m_local_0_phi_fu_178">
+    <nodeIds>68</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln25_fu_216">
+    <nodeIds>23</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="pos_0_fu_288">
+    <nodeIds>71</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_1_phi_fu_166">
+    <nodeIds>51</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="seq1_addr_gep_fu_97">
+    <nodeIds>34</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_fu_248">
+    <nodeIds>39</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="seq2_addr_gep_fu_124">
+    <nodeIds>60</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="n_load_phi_fu_153">
+    <nodeIds>48</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln25_fu_254">
+    <nodeIds>42</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="H_addr_gep_fu_82">
+    <nodeIds>17</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln26_2_fu_237">
+    <nodeIds>31</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_0_phi_fu_141">
+    <nodeIds>22</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="H_addr_7_gep_fu_110">
+    <nodeIds>32</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_3_fu_277">
+    <nodeIds>65</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_align_fu_203">
+    <nodeIds>70</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_traceback_fu_187">
+    <nodeIds>73</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="write_ln46_write_fu_75">
+    <nodeIds>74</nodeIds>
+  </ioNodes>
+  <ioNodes realName="grp_write_fu_60">
+    <nodeIds>19</nodeIds>
+    <nodeIds>43</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln43_write_fu_68">
+    <nodeIds>75</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="H">
+    <nodeIds>18</nodeIds>
+    <nodeIds>33</nodeIds>
+    <nodeIds>59</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="H" portID="100">
+    <nodeIds>70</nodeIds>
+    <nodeIds>73</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="seq1">
+    <nodeIds>35</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="seq1" portID="100">
+    <nodeIds>70</nodeIds>
+    <nodeIds>73</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="seq2">
+    <nodeIds>61</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="seq2" portID="100">
+    <nodeIds>70</nodeIds>
+    <nodeIds>73</nodeIds>
+  </memoryPorts>
+  <ioPorts name="l">
+    <contents name="write">
+      <nodeIds>74</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="m">
+    <contents name="write">
+      <nodeIds>75</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="n">
+    <contents name="write">
+      <nodeIds>19</nodeIds>
+      <nodeIds>43</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="seq1(p0)">
+    <contents name="load">
+      <nodeIds>35</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="seq2(p0)">
+    <contents name="load">
+      <nodeIds>61</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="2" latency="2"/>
+      <operations id="46" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="2"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+    </states>
+    <states id="4">
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="60" stage="1" latency="1"/>
+      <operations id="61" stage="2" latency="2"/>
+    </states>
+    <states id="5">
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="61" stage="1" latency="2"/>
+      <operations id="62" stage="1" latency="1"/>
+      <operations id="63" stage="1" latency="1"/>
+      <operations id="65" stage="1" latency="1"/>
+      <operations id="66" stage="1" latency="1"/>
+    </states>
+    <states id="6">
+      <operations id="68" stage="1" latency="1"/>
+      <operations id="69" stage="1" latency="1"/>
+      <operations id="70" stage="2" latency="2"/>
+      <operations id="75" stage="1" latency="1"/>
+    </states>
+    <states id="7">
+      <operations id="70" stage="1" latency="2"/>
+      <operations id="71" stage="1" latency="1"/>
+      <operations id="72" stage="1" latency="1"/>
+    </states>
+    <states id="8">
+      <operations id="73" stage="2" latency="2"/>
+    </states>
+    <states id="9">
+      <operations id="73" stage="1" latency="2"/>
+      <operations id="74" stage="1" latency="1"/>
+      <operations id="76" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="8" outState="9">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="SmithWaterman" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="1119" mMaxLatency="31715">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <subRegions>5</subRegions>
+      <subRegions>6</subRegions>
+      <subRegions>7</subRegions>
+      <subRegions>8</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>21</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="Init_Row_Loop" mII="-1" mDepth="-1" mMinTripCount="1" mMaxTripCount="100" mMinLatency="2" mMaxLatency="201" mType="1">
+      <basicBlocks>26</basicBlocks>
+      <basicBlocks>38</basicBlocks>
+      <basicBlocks>41</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Region 1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>45</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="5" mTag="Region 2" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>47</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="6" mTag="Region 3" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>50</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="7" mTag="Init_Col_Loop" mII="-1" mDepth="-1" mMinTripCount="1" mMaxTripCount="100" mMinLatency="2" mMaxLatency="201" mType="1">
+      <basicBlocks>55</basicBlocks>
+      <basicBlocks>64</basicBlocks>
+      <basicBlocks>67</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="8" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="1112" mMaxLatency="31309">
+      <basicBlocks>77</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>
